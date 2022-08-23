@@ -49,6 +49,12 @@
   --team-card-bg: #fff;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: var(--body-bg);
   font-family: var(--font-name);
@@ -62,4 +68,10 @@ a {
 h1,
 h2 {
   color: var(--heading-color);
+}
+
+.container {
+  width: 100%;
+  padding: 0 2rem;
+  margin: auto;
 }
