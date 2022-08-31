@@ -1,0 +1,50 @@
+.services_top-content {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service_item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+}
+
+.services_item {
+    background: var(--card-bg);
+    width: 25%;
+    padding: 30px 15px;
+    text-align: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    user-select: none;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.service_icon {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background: var(--icon-bg);
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border: 1.5px solid var(--primary-color);
+}
+
+.service_icon i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.service_title {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}

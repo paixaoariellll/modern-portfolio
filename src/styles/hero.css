@@ -1,0 +1,116 @@
+.hero_section {
+    height: 98vh;
+}
+
+.hero_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero_content,
+.hero_img {
+    width: 50%;
+}
+
+.hero_img img {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    top: -15vh;
+}
+
+.hero_content h2 {
+    font-size: 2rem;
+}
+
+.hero_content {
+    padding-top: 20px;
+}
+
+.name_style {
+    font-family: clicker script;
+    color: var(--primary-color);
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.hero_btns {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.primary_btn {
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 14px;
+    color: #fff;
+    background-color: var(--primary-color);
+    padding: 10px 30px;
+    border: 2px solid var(--primary-color);
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition: 300ms;
+}
+
+.primary_btn:hover {
+    transition: 300ms;
+    transform: scale(1.25);
+    background-color: #fff;
+    color: var(--primary-color);
+    border: solid 2px var(--primary-color);
+    cursor: pointer;
+}
+
+.secondary_btn {
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 14px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 10px 30px;
+    border: 2px solid var(--primary-color);
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.secondary_btn:hover {
+    transition: 300ms;
+    transform: scale(1.25);
+    background-color: var(--primary-color);
+    color: #fff;
+    border: solid 2px var(--primary-color);
+}
+
+.txt-rotate {
+    color: var(--primary-color) !important;
+    border-right: 0.08em solid var(--primary-color);
+}
+
+.pb-15 {
+    margin-top: 2rem;
+}
+
+.hero_img {
+    animation: updown 5s linear infinite;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}

@@ -1,2 +1,1 @@
-# modern-portfolio
-Ariel Paixão
+# react-portfolio

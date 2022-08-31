@@ -1,5 +1,8 @@
 import React from "react";
-import "./Header.css";
+import "./header.css";
+/* import mylogo from "../../assets/Logo/logo.svg"; */
+import moon from "../../assets/icons/moon.svg";
+import sun from "../../assets/icons/sun.svg";
 
 const nav_links = [
   {
@@ -11,29 +14,28 @@ const nav_links = [
     display: "About",
   },
   {
-    path: "#service",
-    display: "Service",
+    path: "#services",
+    display: "Services",
   },
   {
     path: "#projects",
-    display: "Projects",
+    display: "Contato",
   },
   {
     path: "#contact",
     display: "Contact",
   },
 ];
-
-const Header = () => {
+const header = ({ theme, troggleTheme }) => {
   return (
     <header className="header">
       <div className="container">
-        <div className="nav_bar">
+        <nav className="nav_bar">
           <div className="logo">
+            {/* <img src={mylogo} alt="" /> */}
             <h2>Ariel Paixão</h2>
           </div>
-
-          {/* ===== nvegação ===== */}
+          {/* Barra de navegação */}
           <div className="navigation">
             <ul className="menu">
               {nav_links.map((item, index) => (
@@ -45,17 +47,25 @@ const Header = () => {
               ))}
             </ul>
           </div>
-
-          {/* ===== ligth mode ===== */}
-          <div className="light_mode">
-            <span>
-              <i class="ri-sun-line"></i> Light Mode
+          {/* lightmode */}
+          <div className="light_mode icons_lightmode">
+            <span onClick={troggleTheme}>
+              {theme === "light-theme" ? (
+                <span className="dark-theme">
+                  <img style={{ width: "1.7rem" }} src={moon} alt="" />
+                </span>
+              ) : (
+                <span>
+                  <img style={{ width: "2.5rem" }} src={sun} alt="" />
+                </span>
+              )}
             </span>
           </div>
-        </div>
+          {/* login */}
+        </nav>
       </div>
     </header>
   );
 };
 
-export default Header;
+export default header;
