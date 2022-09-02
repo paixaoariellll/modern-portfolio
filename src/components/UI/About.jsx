@@ -28,6 +28,18 @@ const chooseData = [
     desc: "Veritatis id vitae temporibus rerum, omnis accusantium pariatur ad quod explicabo commodi!",
     now: 90,
   },
+  {
+    icon: "ri-apps-line",
+    title: "Quinto Projeto",
+    desc: "Veritatis id vitae temporibus rerum, omnis accusantium pariatur ad quod explicabo commodi!",
+    now: 60,
+  },
+  {
+    icon: "ri-apps-line",
+    title: "Sexto Projeto",
+    desc: "Veritatis id vitae temporibus rerum, omnis accusantium pariatur ad quod explicabo commodi!",
+    now: 55,
+  },
 ];
 
 const About = () => {

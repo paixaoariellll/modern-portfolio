@@ -7,21 +7,30 @@ import image3 from "../../assets/img/contact_03.png";
 import image4 from "../../assets/img/contact_04.png";
 import image5 from "../../assets/img/contact_05.png";
 
-const Contact = () => {
+const Images = () => {
   return (
-    <section className="me_contact" id="contact">
+    <section className="me_carousel" id="images">
       <div className="container">
-        <div className="contact_content">
-          <h6 className="subtitle">Meus contatos</h6>
+        <div className="carousel_content">
+          <h6 className="subtitle">imagens</h6>
           <h2>
-            Entre em contato
-            <span className="highlight"> pelas minhas redes</span>
+            Minhas páginas desenvolvidadas
+            <span className="highlight"> para Web</span>
           </h2>
         </div>
-        <div className="contact_wrapper">
-          <div className="contact_item">
-            <div className="contact_img">
-              <Carousel wrapAround={true} slidesToShow={3}>
+        <div className="carousel_wrapper">
+          <div className="carousel_item">
+            <div className="carousel_img">
+              <Carousel
+                autoplayInterval={5000}
+                autoplay={true}
+                pauseOnHover
+                cellSpacing={0}
+                adaptiveHeightAnimation={true}
+                wrapAround={true}
+                slidesToShow={3}
+                style={{ height: "42rem" }}
+              >
                 <img src={image1} />
                 <img src={image2} />
                 <img src={image3} />
@@ -36,4 +45,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Images;

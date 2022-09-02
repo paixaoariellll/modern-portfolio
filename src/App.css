@@ -6,6 +6,7 @@
 
 :root {
   --primary-color: #379cf6;
+  --shrink-bg: #0c123d;
   --heading-color: #fff;
   --btn-primary-bg: #379cf6;
   --btn-secondary-bg: #090238;
@@ -33,6 +34,7 @@
 
 .light-theme {
   --body-bg: rgb(255, 255, 255);
+  --shrink-bg: #d9d2ff;
   --heading-color: #0c123d;
   --btn-secondary-bg: #816aff;
   --btn-primary-bg: #fff;
@@ -55,6 +57,7 @@
   padding: 0;
   box-sizing: border-box;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import Header from './components/Header/header';
+import React, { useState, useEffect } from 'react'
+import './App.css'
+import Home from './components/Home/Home'
 import Hero from './components/UI/Hero'
 import Services from './components/UI/Services'
 import About from './components/UI/About'
-import Images from './components/UI/Images';
+import Images from './components/UI/Images'
+import Footer from './components/Footer/footer'
 
 function App() {
   const [theme, setTheme] = useState("")
@@ -15,11 +16,12 @@ function App() {
     document.body.className = theme
   }, [theme])
   return <>
-    <Header theme={theme} troggleTheme={troggleTheme} />
+    <Home theme={theme} troggleTheme={troggleTheme} />
     <Hero theme={theme} />
     <Services />
     <About />
     <Images />
+    <Footer />
   </>
 }
 

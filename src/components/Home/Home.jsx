@@ -1,12 +1,12 @@
-import React from "react";
-import "./header.css";
+import React, { useEffect, useRef } from "react";
+import "./home.css";
 /* import mylogo from "../../assets/Logo/logo.svg"; */
 import moon from "../../assets/icons/moon.svg";
 import sun from "../../assets/icons/sun.svg";
 
 const nav_links = [
   {
-    path: "#home",
+    path: "#hero",
     display: "Home",
   },
   {
@@ -18,17 +18,47 @@ const nav_links = [
     display: "Services",
   },
   {
-    path: "#projects",
-    display: "Contato",
+    path: "#images",
+    display: "images",
   },
   {
-    path: "#contact",
-    display: "Contact",
+    path: "#footer",
+    display: "Footer",
   },
 ];
-const header = ({ theme, troggleTheme }) => {
+const Home = ({ theme, troggleTheme }) => {
+  const homeRef = useRef(null);
+
+  const homeFunc = () => {
+    if (
+      document.body.scrollTop > 80 ||
+      document.documentElement.scrollTop > 80
+    ) {
+      homeRef.current.classList.add("home_shrink");
+    } else {
+      homeRef.current.classList.remove("home_shrink");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", homeFunc);
+
+    return () => window.removeEventListener("scroll", homeFunc);
+  }, []);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+
+    const targetAttr = e.target.getAttribute("href");
+
+    const location = document.querySelector(targetAttr).offsetTop;
+    window.scrollTo({
+      left: 0,
+      top: location - 80,
+    });
+  };
   return (
-    <header className="header">
+    <home className="home" ref={homeRef}>
       <div className="container">
         <nav className="nav_bar">
           <div className="logo">
@@ -39,8 +69,12 @@ const header = ({ theme, troggleTheme }) => {
           <div className="navigation">
             <ul className="menu">
               {nav_links.map((item, index) => (
-                <li className="menu_item">
-                  <a href={item.path} className="menu_index">
+                <li className="menu_item" key={index}>
+                  <a
+                    href={item.path}
+                    onClick={handleClick}
+                    className="menu_index"
+                  >
                     {item.display}
                   </a>
                 </li>
@@ -64,8 +98,8 @@ const header = ({ theme, troggleTheme }) => {
           {/* login */}
         </nav>
       </div>
-    </header>
+    </home>
   );
 };
 
-export default header;
+export default Home;
