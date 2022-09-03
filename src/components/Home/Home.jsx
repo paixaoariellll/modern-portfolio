@@ -19,7 +19,7 @@ const nav_links = [
   },
   {
     path: "#images",
-    display: "images",
+    display: "Imagens",
   },
   {
     path: "#footer",

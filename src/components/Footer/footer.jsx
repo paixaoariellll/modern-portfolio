@@ -47,7 +47,7 @@ const footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <div className="container">
         <div className="footer_wrapper">
           <div className="footer_logo">

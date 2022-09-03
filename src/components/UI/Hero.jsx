@@ -55,7 +55,7 @@ const Hero = ({ theme }) => {
             <img
               className="fluid"
               src={theme === "light-theme" ? LightHero : imghero}
-              alt=""
+              alt="SVG personlaizado de Ariel Paixão"
             />
           </div>
           <div className="hero_content ">
