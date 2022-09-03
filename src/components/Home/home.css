@@ -75,6 +75,13 @@
     box-shadow: 2px 2px 15px -2px rgb(72, 71, 71);
 }
 
+.mobile_menu {
+    color: var(--heading-color);
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: none;
+}
+
 .home_shrink {
     display: flex;
     width: 100%;
@@ -85,4 +92,50 @@
     left: 0;
     background: var(--shrink-bg);
     z-index: 999;
+}
+
+/* ========== responsividade ============ */
+
+@media only screen and (max-width: 992px) {
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(6, 11, 26, 0.868);
+        z-index: 99999;
+        display: none;
+    }
+
+    .menu {
+        flex-direction: column;
+        background: var(--btn-secondary-bg);
+        width: 250px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 999999;
+    }
+
+    .menu_active {
+        display: block;
+    }
+
+    .mobile_menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile_menu {
+        font-size: 1rem;
+    }
+
+    .logo h2 {
+        font-size: 1.3rem;
+    }
 }

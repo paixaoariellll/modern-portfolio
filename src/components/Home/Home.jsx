@@ -28,7 +28,7 @@ const nav_links = [
 ];
 const Home = ({ theme, troggleTheme }) => {
   const homeRef = useRef(null);
-
+  const menuRef = useRef(null);
   const homeFunc = () => {
     if (
       document.body.scrollTop > 80 ||
@@ -57,6 +57,8 @@ const Home = ({ theme, troggleTheme }) => {
       top: location - 80,
     });
   };
+
+  const toggleMenu = () => menuRef.current.classList.toggle("menu_active");
   return (
     <home className="home" ref={homeRef}>
       <div className="container">
@@ -66,7 +68,7 @@ const Home = ({ theme, troggleTheme }) => {
             <h2>Ariel Paixão</h2>
           </div>
           {/* Barra de navegação */}
-          <div className="navigation">
+          <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <ul className="menu">
               {nav_links.map((item, index) => (
                 <li className="menu_item" key={index}>
@@ -95,7 +97,10 @@ const Home = ({ theme, troggleTheme }) => {
               )}
             </span>
           </div>
-          {/* login */}
+          {/* mobile */}
+          <span className="mobile_menu" onClick={toggleMenu}>
+            <i class="ri-menu-line"></i>
+          </span>
         </nav>
       </div>
     </home>
